@@ -218,19 +218,6 @@ gaps inner 10
 #
 # Colors
 #
-set $back          #1d1F21
-set $black         #282A2E
-set $white         #C5C8C6
-set $yellow        #F0C674
-set $red           #CC6666
-set $darkred       #A54242
-set $green         #B5BD56
-
-set $lightgrey     #b0b8c0
-set $grey          #676B71
-set $white      #f0f0f0
-set $blue       #2a7fd3
-
 set $white      #f0f0f0
 set $black      #282a2e
 set $blue       #2a7fd3
@@ -241,7 +228,7 @@ set $greytrans  #2b303bc0
 set $red        #cc6666
 set $redtrans   #cc6666c0
 
-client.focused          $bluetrans   $bluetrans   $white  $white        $blue
+client.focused          $bluetrans   $bluetrans   $white  $blue         $blue
 client.focused_inactive $greytrans   $greytrans   $white  $lightgrey    $lightgrey
 client.unfocused        $greytrans   $greytrans   $white  $lightgrey    $lightgrey
 client.urgent           $redtrans    $redtrans    $black  $red          $red
