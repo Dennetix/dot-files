@@ -42,7 +42,11 @@
     },
     "battery": {
         "format": "{capacity}% {icon}",
-        "format-icons": ["", "", "", "", ""]
+        "format-icons": ["", "", "", "", ""],
+        "states": {
+            "warning": 20,
+            "critical": 10
+        }
     },
     "clock": {
         "format": "{:%H:%M | %d.%m.}"

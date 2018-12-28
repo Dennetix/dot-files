@@ -29,11 +29,15 @@ window#waybar {
     background-color: #46AA6D;
 }
 
-@keyframes blink {
-    to { background-color: #FF525A; }
+#battery.warning:not(.charging) {
+    background: #FF828A;
 }
 
-#battery.warning:not(.charging) {
+@keyframes blink {
+    to { background-color: #FF424A; }
+}
+
+#battery.critical:not(.charging) {
     background: #FF828A;
     animation-name: blink;
     animation-duration: 0.5s;
