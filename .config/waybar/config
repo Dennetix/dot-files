@@ -1,0 +1,50 @@
+{
+    "layer": "top",
+    "height": 28,
+    "modules-left": ["sway/workspaces", "sway/mode", "tray"],
+    "modules-ceneter": ["sway/window"],
+    "modules-right": ["pulseaudio", "network", "cpu", "memory", "battery", "clock"],
+    "sway/window": {
+        "max-length": 50
+    },
+    "tray": {
+        "icon-size": 21,
+        "spacing": 10
+    },
+    "pulseaudio": {
+        "format": "{volume}% {icon}",
+        "format-bluetooth": "{volume}% {icon}",
+        "format-muted": "",
+        "format-icons": {
+            "headphones": "",
+            "handsfree": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", ""]
+        },
+        "on-click": "pavucontrol"
+    },
+    "network": {
+        "interval": 10,
+        "format-wifi": "{signalStrength}% ",
+        "format-ethernet": "",
+        "format-disconnected": ""
+    },
+    "cpu": {
+        "interval": 2,
+        "format": "{usage}% "
+    },
+    "memory": {
+        "interval": 2,
+        "format": "{}% "
+    },
+    "battery": {
+        "format": "{capacity}% {icon}",
+        "format-icons": ["", "", "", "", ""]
+    },
+    "clock": {
+        "format": "{:%H:%M | %d.%m.}"
+    }
+}
