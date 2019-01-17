@@ -1,15 +1,11 @@
 {
-    "layer": "bottom",
+    "layer": "bottomo",
     "height": 28,
-    "modules-left": ["sway/workspaces", "sway/mode", "tray"],
+    "modules-left": ["sway/workspaces", "sway/mode"],
     "modules-ceneter": ["sway/window"],
     "modules-right": ["pulseaudio", "network", "cpu", "memory", "battery", "clock"],
     "sway/window": {
         "max-length": 50
-    },
-    "tray": {
-        "icon-size": 21,
-        "spacing": 10
     },
     "pulseaudio": {
         "format": "{volume}% {icon}",

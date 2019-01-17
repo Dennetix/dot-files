@@ -22,7 +22,7 @@ set $menu dmenu_path | dmenu | xargs swaymsg exec
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg /usr/share/backgrounds/antergos/antergos-wallpaper.png fill
+output * bg /usr/share/backgrounds/wolf.jpg fill
 #
 # Example configuration:
 #
@@ -33,10 +33,10 @@ output * bg /usr/share/backgrounds/antergos/antergos-wallpaper.png fill
 ### Idle configuration
 
 exec swayidle \
-    timeout 180 '/home/dennetix/.scripts/lock.sh' \
-    timeout 120 'swaymsg "output * dpms off"' \
-       resume 'swaymsg "output * dpms on"' \
-    before-sleep '/home/dennetix/.scripts/lock.sh'
+    timeout 90 'swaymsg "output * dpms off"' \
+	resume 'swaymsg "output * dpms on"' \
+    timeout 120 'systemctl suspend' \
+    before-sleep '/home/dennetix/scripts/lock.sh'
 # This will lock your screen after 300 seconds of inactivity, then turn off
 # your displays after another 300 seconds, and turn your screens back on when
 # resumed. It will also lock your screen before your computer goes to sleep.
@@ -213,7 +213,8 @@ floating_maximum_size -1 x -1
 focus_follows_mouse no
 default_border pixel 2
 default_floating_border pixel 2
-gaps inner 10
+gaps inner 5
+gaps outer -2
 
 #
 # Colors
@@ -232,3 +233,12 @@ client.focused          $bluetrans   $bluetrans   $white  $blue         $blue
 client.focused_inactive $greytrans   $greytrans   $white  $lightgrey    $lightgrey
 client.unfocused        $greytrans   $greytrans   $white  $lightgrey    $lightgrey
 client.urgent           $redtrans    $redtrans    $black  $red          $red
+
+#
+# Autostart programs
+#
+exec_always enpass
+assign [class="Enpass"] 9
+
+exec_always discord
+assign [class="discord"] 10

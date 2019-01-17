@@ -18,7 +18,7 @@ window#waybar {
     border-bottom: 3px solid transparent;
 }
 
-#workspaces button.focused, #clock, #battery, #cpu, #memory, #network, #pulseaudio, #tray, #mode {
+#workspaces button.focused, #clock, #battery, #cpu, #memory, #network, #pulseaudio, #mode {
     padding: 0 10px;
     margin: 0 3px;
     border-bottom: 3px solid white;
